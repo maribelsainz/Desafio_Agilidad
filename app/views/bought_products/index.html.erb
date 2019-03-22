@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bought Products</h1>
+
+<ul>
+  <% @bought_products.each do |bought| %>
+    <li>
+      <%= "#{bought.product.name} - #{bought.product.price}" %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Bought Product', new_bought_product_path %>
